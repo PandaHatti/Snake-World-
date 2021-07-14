@@ -1,0 +1,357 @@
+﻿*
+{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Consolas;
+}
+
+body
+{
+    min-height:200vh;
+
+}
+
+section
+{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    z-index:1000;
+    pointer-events:none;
+}
+
+    section .side
+    {
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        background:url('galleryandrest/pic5.jpg');
+    }
+
+        section .side#side1 {
+            clip-path: polygon(0% 1%, 54% 0%, 25% 25%, 50% 31%, 27% 52%, 48% 57%, 29% 64%, 48% 70%,
+            27% 79%, 55% 88%, 29% 100%, 63% 100%, 0% 99%);
+        }
+
+
+        section .side#side2 {
+            clip-path: polygon(100% 0, 54% 0%, 25% 25%, 50% 31%, 27% 52%, 48% 57%, 29% 64%, 48% 70%, 27% 79%, 55% 88%, 29% 100%, 63% 100%, 100% 100%);
+        }
+
+
+
+
+
+            
+.contentBx
+{
+    background:linear-gradient(45deg,#ff0000,#000000);
+    color:#ffd800;
+    padding:100px;
+    padding-top:150vh;
+}
+
+    .contentBx h2
+    {
+        position:relative;
+        font-size:4em;
+        font-family:Constantia;
+        font-weight:300;
+
+    }
+
+    .contentBx p 
+    {
+        position: relative;
+        font-size: 2em;
+        font-family: Constantia;
+        font-weight: 100;
+    }
+
+    .contentBx .nav
+    {
+    width: 100vw;
+    }
+
+
+ul
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+li
+{
+    position: relative;
+    padding: 0 20px;
+    height: 100%;
+    display: flex;
+}
+
+
+a
+{
+    z-index: 1;
+    color: white;
+    text-decoration: none;
+    font-family: Bahnschrift;
+    font-weight: 500;
+    font-size: 18px;
+    padding: 10px 5px;
+}
+
+li::before {
+    content: "";
+    position: absolute;
+    height: 33.33%;
+    width: 0;
+    background-color:#000000;
+    right: 0;
+    z-index: 0;
+    top: 33.33%;
+    transition: all 0.5s;
+}
+
+li::after {
+    content: "";
+    position: absolute;
+    height: 33.33%;
+    width: 0;
+    background-color:#ff6a00;
+    left: 0;
+    z-index: 0;
+    bottom: 0;
+    transition: all 0.5s;
+}
+
+a:before {
+    position: absolute;
+    content: "";
+    height: 33.33%;
+    width: 0;
+    background-color:black;
+    bottom: 66.66%;
+    left: 0;
+    transition: all 0.5s;
+}
+
+li:hover:before,
+li:hover:after,
+li:hover a:before {
+    width: 100%;
+}
+
+
+
+
+
+
+
+    .container {
+        width: 1000px;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .container .write
+    {
+        font-size:1.5em;
+        font-weight:100;
+        color:ghostwhite;
+
+    }
+    .container .card {
+        position: relative;
+        width: 300px;
+        height: 300px;
+    }
+
+        .container .card .face {
+            position: absolute;
+            top: 20px;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transition: 0.5s;
+        }
+
+            .container .card .face.face1 {
+                background:linear-gradient(30deg,#000000,#ff0000);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 1;
+                transform-origin: bottom;
+            }
+
+                .container .card .face.face1 img {
+                    max-width: 300px;
+                }
+
+                .container .card .face.face1 h3 {
+                    margin: 20px 0 0;
+                    color:#ffffff;
+                    text-align: center;
+                    font-size:1em;
+                }
+
+        .container .card:hover .face.face1 {
+            transform: translateY(-100%) rotateX(90deg);
+        }
+
+.filterimg
+{
+    padding:20px;
+    width:1280px;
+    margin:40px auto;
+    background:linear-gradient(45deg,#ff0000,#000000);
+}
+
+    .filterimg ul 
+    {
+        display: flex;
+        margin-bottom: 10px;
+        color:aliceblue;
+    }
+
+    .filterimg ul li
+    {
+        list-style:none;
+        background:#808080;
+        padding:8px 20px;
+        margin:5px;
+        letter-spacing:1px;
+        cursor:pointer;
+        
+
+
+    }
+
+        .filterimg ul li .active
+        {
+            background:#0094ff;
+            color:black;
+        }
+
+
+.snakesgal
+{
+    display:flex;
+    flex-wrap:wrap;
+}
+
+    .snakesgal .itemBox
+    {
+        position:relative;
+        width:300px;
+        height:300px;
+        margin:5px;
+    }
+
+        .snakesgal .itemBox img
+        {
+            position:absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            object-fit:cover;
+
+
+        }
+
+
+.pic1 {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    transform-style: preserve-3d;
+    width: 1100px;
+}
+
+    .pic1 .card {
+        position: relative;
+        width: 350px;
+        height: 350px;
+        margin: 20px;
+        transform-style: preserve-3d;
+        perspective: 1000px;
+    }
+
+        .pic1 .card .box {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: 1s ease;
+        }
+
+        .pic1 .card:hover .box {
+            transform: rotateY(180deg);
+        }
+
+        .pic1 .card .box .imgBx {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+            .pic1 .card .box .imgBx img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+        .pic1 .card .box .contentB {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(20deg,#ffffff,#808080);
+            backface-visibility: hidden;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            transform-style: preserve-3d;
+            transform: rotateY(180deg);
+        }
+
+            .pic1 .card .box .contentB div {
+                transform-style: preserve-3d;
+                padding: 20px;
+                background: linear-gradient(45deg,#808080,#ffffffS);
+                transform: translateZ(100px);
+            }
+
+                .pic1 .card .box .contentB div h2 {
+                    color: #000;
+                    font-size: 20px;
+                    letter-spacing: 1px;
+                }
+
+
+                .pic1 .card .box .contentB div p {
+                    color: #000;
+                    font-size: 16px;
+                }

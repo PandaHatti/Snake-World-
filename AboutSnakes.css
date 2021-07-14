@@ -1,0 +1,417 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+    background:#000;
+}
+nav {
+    width: 100vw;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+li {
+    position: relative;
+    padding: 0 20px;
+    height: 100%;
+    display: flex;
+}
+
+a {
+    z-index: 1;
+    color: white;
+    text-decoration: none;
+    font-family: Bahnschrift;
+    font-weight: 500;
+    font-size: 18px;
+    padding: 10px 5px;
+}
+
+li::before {
+    content: "";
+    position: absolute;
+    height: 33.33%;
+    width: 0;
+    background-color:#ff6a00;
+    right: 0;
+    z-index: 0;
+    top: 33.33%;
+    transition: all 0.5s;
+}
+
+li::after {
+    content: "";
+    position: absolute;
+    height: 33.33%;
+    width: 0;
+    background-color: #ffd800;
+    left: 0;
+    z-index: 0;
+    bottom: 0;
+    transition: all 0.5s;
+}
+
+a:before {
+    position: absolute;
+    content: "";
+    height: 33.33%;
+    width: 0;
+    background-color: #ffd800;
+    bottom: 66.66%;
+    left: 0;
+    transition: all 0.5s;
+}
+
+li:hover:before,
+li:hover:after,
+li:hover a:before {
+    width: 100%;
+}
+
+
+
+section {
+   
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 100px 150px;
+}
+
+    section header
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 40px 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 10;
+    }
+
+        section header .logo {
+            position: relative;
+            font-size: 1.5em;
+            color: #ffffff;
+            font-weight: 200;
+            text-decoration: none;
+        }
+
+        section header .toggle {
+            position: relative;
+            width: 40px;
+            height: 40px;
+            background: url('Pics/toggle.png');
+            background-size: 30px;
+            background-repeat: no-repeat;
+            background-position: center;
+            cursor: pointer;
+        }
+
+
+
+
+.bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-position: center;
+}
+
+
+
+.content {
+    position: absolute;
+    left: 100px;
+    max-width: 600px;
+    z-index: 10;
+}
+
+    .content h2 {
+        font-size: 3.5em;
+        color: #ff6a00;
+        font-weight: 400;
+        line-height: 2em;
+    }
+
+
+        .content h2 span {
+            font-weight: 800;
+            font-size: 3.5em;
+            letter-spacing: 5px;
+        }
+
+    .content p {
+        color: #ffffff;
+        margin-top: 15px;
+    }
+
+    .content a {
+        display: inline-block;
+        padding: 10px 20px;
+        background: linear-gradient(30deg,#808080,#ff6a00);
+        color: #000;
+        text-decoration: none;
+        text-transform: uppercase;
+        margin-top: 20px;
+        font-weight: 600;
+        letter-spacing: 2px;
+    }
+
+
+History 
+{
+    position:relative;
+    width: 100%;
+    display:block;
+    justify-content:right;
+    align-items:center;
+}
+
+    History .writeup 
+    {
+        position: center;
+        font-weight: 800;
+        font-size: 3.5em;
+        letter-spacing: 5px;
+        
+    }
+
+.title
+{
+    font-weight: 900;
+    background:linear-gradient(40deg,#8d8e92,#ff6a00);
+    font-size: 3.5em;
+    margin-bottom: 10px;
+}
+
+.te
+{
+    color: #fff;
+    font-weight: 300;
+    font-size: 2em;
+    font-family:'Microsoft Himalaya';
+    margin-bottom: 10px;
+    letter-spacing:2px;
+}
+
+.pic1
+{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    transform-style: preserve-3d;
+    width: 1100px;
+}
+
+    .pic1 .card {
+        position: relative;
+        width: 350px;
+        height: 350px;
+        margin: 20px;
+        transform-style: preserve-3d;
+        perspective: 1000px;
+    }
+
+         .pic1 .card .box {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: 1s ease;
+        }
+
+        .pic1 .card:hover .box
+        {
+            transform: rotateY(180deg);
+        }
+
+        .pic1 .card .box .imgBx 
+        {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+             .pic1 .card .box .imgBx img 
+            {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+       .pic1 .card .box .contentBx 
+        {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(20deg,#ffffff,#808080);
+            backface-visibility: hidden;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            transform-style: preserve-3d;
+            transform: rotateY(180deg);
+        }
+
+             .pic1 .card .box .contentBx div {
+                transform-style: preserve-3d;
+                padding: 20px;
+                background: linear-gradient(45deg,#808080,#ffffffS);
+                transform: translateZ(100px);
+            }
+
+                 .pic1 .card .box .contentBx div h2 {
+                    color: #000;
+                    font-size: 20px;
+                    letter-spacing: 1px;
+                }
+
+
+              .pic1 .card .box .contentBx div p {
+                    color: #000;
+                    font-size: 16px;
+                }
+
+
+
+
+
+
+
+.pic2 
+{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    transform-style: preserve-3d;
+    width: 1100px;
+}
+
+    .pic2 .card1 {
+        position: relative;
+        width: 400px;
+        height: 400px;
+        margin: 30px;
+        transform-style: preserve-3d;
+        perspective: 1000px;
+    }
+
+        .pic2 .card1 .box1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: 1s ease;
+        }
+
+        .pic2 .card1:hover .box1 {
+            transform: rotateY(180deg);
+        }
+
+        .pic2 .card1 .box1 .imgBx1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+            .pic2 .card1 .box1 .imgBx1 img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+        .pic2 .card1 .box1 .contentBx1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #808080;
+            backface-visibility: hidden;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            transform-style: preserve-3d;
+            transform: rotateY(180deg);
+        }
+
+            .pic2 .card1 .box1 .contentBx1 div {
+                transform-style: preserve-3d;
+                padding: 20px;
+                background: linear-gradient(45deg,#fe0061,#ffeb3b);
+                transform: translateZ(100px);
+            }
+
+                .pic2 .card1 .box1 .contentBx1 div h2 {
+                    color: #fff;
+                    font-size: 20px;
+                    letter-spacing: 1px;
+                }
+
+
+                .pic2 .card1 .box1 .contentBx1 div p {
+                    color: #fff;
+                    font-size: 16px;
+                }
+
+
+
+Venomtype
+{
+    position: relative;
+    width: 100%;
+    display: block;
+    justify-content: left;
+    align-items: center;
+}
+
+    Venomtype .writeup1 {
+        position: center;
+        font-weight: 800;
+        font-size: 3.5em;
+        letter-spacing: 5px;
+    }
+
+
+
+    

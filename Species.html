@@ -1,0 +1,190 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Types of Snakes</title>
+    <link rel="stylesheet" href="Species1.css">
+</head>
+<body>
+    <section>
+
+
+        <div class="side" id="side1"> </div>
+        <div class="side" id="side2"> </div>
+    </section>
+
+    <div class="contentBx">
+
+
+        <nav>
+
+            <ul>
+                <li><a href="homepage1.html">HOME</a></li>
+                <li><a href="AboutSnakes.html">ABOUT SNAKES</a></li>
+                <li><a href="Species.html">SPECIES</a></li>
+                <li><a href="Gallery.html">GALLERY</a></li>
+
+            </ul>
+        </nav>
+
+        <h2>Types of Snakes:</h2>
+        <p>Snakes are basically bifercated in 3 groups:</p>
+
+
+
+        <div class="container">
+            <div class="card">
+                <div class="face face1">
+                    <div class="content">
+                        <img src="Pics/malabar.jpg">
+                        <h3>VENOMOUS SNAKES</h3>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content">
+                        <p class="write">
+                            Snakes which have venom glands, and when threatned
+                            can strike and can cause damage to a human body.
+                            Neurotoxic: Brain and Nerves.
+                            Hemotoxic:Muscles and pores.
+                            Cytotoxic: action on the area of the bite.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="card">
+                <div class="face face1">
+                    <div class="content">
+                        <img src="Pics/shortnosed (1).jpg">
+                        <h3>MILD-VENOMOUS SNAKES</h3>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content">
+                        <p class="write">
+                            Snankes which are venomous in nature to the prey, but not to humans. when bitten,
+                            the venom of the snake does not effect to humans.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="card">
+                <div class="face face1">
+                    <div class="content">
+                        <img src="Pics/trinket1 (2).jpg">
+                        <h3>NON-VENOMOUS SNAKES</h3>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <div class="content">
+                        <p class="write">
+                            Snakes which do not have venom gland, and are mostly shy in nature
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="filterimg">
+        <ul>
+            <li class="list active" data-filter="All">All</li>
+            <li class="list" data-filter="Venomous">Venomous</li>
+            <li class="list" data-filter="Non-Venomous">Non-Venomous</li>
+            <li class="list" data-filter="Mildy-venomous">Mildy-venomous</li>
+
+        </ul>
+        
+
+           
+
+
+        <div class="snakesgal">
+
+
+            <div class="itemBox Venomous"><img src="filterimages/bambo.jpg" /></div>
+
+
+            <div class="itemBox Venomous"><img src="filterimages/bandedkrait.jpg" /></div>
+
+            <div class="itemBox Venomous"><img src="filterimages/bcoralsnakes.jpg" /></div>
+            <div class="itemBox Mildy-venomous"><img src="filterimages/beddomscatsnake.jpg" /></div>
+
+            <div class="itemBox Non-Venomous"><img src="filterimages/eggeater.jpg" /></div>
+            <div class="itemBox Non-Venomous"><img src="filterimages/ornateflying.jpg" /></div>
+
+            <div class="itemBox Venomous"><img src="filterimages/cobra.jpg" /></div>
+            <div class="itemBox Venomous"><img src="filterimages/russelsv.jpg" /></div>
+
+            <div class="itemBox Non-Venomous"><img src="filterimages/glossymarsh.jpg" /></div>
+            <div class="itemBox Mildy-venomous"><img src="filterimages/Catsnake.jpeg" /></div>
+
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+            crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.list').click(function () {
+                const value = $(this).attr('data-filter');
+                if (value == 'All') {
+                    $('.itemBox').show('1000');
+                }
+
+                else {
+                    $('.itemBox').not('.' + value).hide('1000');
+                    $('.itemBox').filter('.' + value).show('1000');
+
+
+
+                }
+            }) 
+
+            $('.list').click(function () {
+                $(this).addClass('active').siblings().removeClass('active')
+            })
+
+        })
+        </script>
+
+
+
+
+
+
+    <script type="text/javascript">
+        var side1 = document.getElementById("side1")
+        window.addEventListener("scroll", function () {
+            side1.style.left = -window.pageYOffset + "px";
+
+
+
+
+        })
+
+        var side2 = document.getElementById("side2")
+        window.addEventListener("scroll", function () {
+            side2.style.left = window.pageYOffset + "px";
+
+
+
+
+        })
+
+    </script>
+
+</body>
+</html>

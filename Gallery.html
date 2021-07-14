@@ -1,0 +1,220 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Gallery</title>
+    <link rel="stylesheet" type="text/css" href="Gallery.css">
+</head>
+<body>
+    <nav>
+
+        <ul>
+            <li><a href="homepage1.html">HOME</a></li>
+            <li><a href="AboutSnakes.html">ABOUT SNAKES</a></li>
+            <li><a href="Species.html">SPECIES</a></li>
+            <li><a href="Gallery.html">GALLERY</a></li>
+
+        </ul>
+    </nav>
+    <section>
+
+        <h1>GALLERY</h1>
+        <img src="Pics/res1.jpg">
+    </section>
+
+
+    <style>
+        div.gallery {
+            border: 1px solid #ccc;
+        }
+
+            div.gallery:hover {
+                border: 1px solid #777;
+            }
+
+            div.gallery img {
+                width: 100%;
+                height: auto;
+            }
+
+        div.desc {
+            padding: 15px;
+            text-align: center;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .responsive {
+            padding: 0 6px;
+            float: left;
+            width: 24.99999%;
+        }
+
+        @media only screen and (max-width: 700px) {
+            .responsive {
+                width: 49.99999%;
+                margin: 6px 0;
+            }
+        }
+
+        @media only screen and (max-width: 500px) {
+            .responsive {
+                width: 100%;
+            }
+        }
+
+        .clearfix:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+
+    <div class="responsive">
+        <div class="gallery">
+            <a target="_blank" href="Gallery/SFgarther.jpg">
+                <img src="Gallery/SFgarther.jpg" alt="Northern Lights" width="600" height="400">
+            </a>
+            <div class="desc">SAN-FRANSISCO GATHER SNAKE:Known for its colourful body and is in the list of Endangered species.</div>
+        </div>
+    </div>
+
+    <div class="responsive">
+        <div class="gallery">
+            <a target="_blank" href="Gallery/caliosnake.jpg">
+                <img src="Gallery/caliosnake.jpg" alt="Mountains" width="600" height="300">
+            </a>
+            <div class="desc">CALICO SNAKE:Also known as "False Snake" due to its coloration and match to the identity of coral snakes</div>
+        </div>
+    </div>
+
+
+    <div class="responsive">
+        <div class="gallery">
+            <a target="_blank" href="Gallery/leafnose.jpg">
+                <img src="Gallery/leafnose.jpg" alt="Mountains" width="600" height="300">
+            </a>
+            <div class="desc">LEAF-NOSE SNAKE:A  mildly venomous snake which is known for its camoflauge nature and long nose like structure.</div>
+        </div>
+    </div>
+
+    <div class="responsive">
+        <div class="gallery">
+            <a target="_blank" href="Gallery/tensnake.jpg">
+                <img src="Gallery/tensnake.jpg" alt="Mountains" width="600" height="300">
+            </a>
+            <div class="desc">
+                TENTACLED SNAKE:A snake famous for its Tentacled like structure and viligint body.Its a snake that has very fast reflex and need to be seen in slow-motion
+                tounderstand its hunting techique.
+            </div>
+        </div>
+    </div>
+
+    <div class="responsive">
+        <div class="gallery">
+            <a target="_blank" href="Gallery/lianasnake.jpg">
+                <img src="Gallery/lianasnake.jpg" alt="Mountains" width="600" height="300">
+            </a>
+            <div class="desc">LIANA SNAKE:A rare and shy snake of South America, also known as "Checkered Belly".</div>
+        </div>
+    </div>
+
+    <div class="clearfix"></div>
+
+    <div style="padding:6px;">
+
+    </div>
+
+    <!--====================================================================================================================================================================================-->
+    <!--SECOND PART OF GALLERY SLIDSHOW - INDIAN SPECIES -->
+    <h2 style="text-align:center">INDIAN SPECIES </h2>
+    <link rel="stylesheet" href="StyleSheetFiles/imageGallery.css">
+    <div class="row">
+        <div class="column">
+            <img src="Gallery/checkeredkeelback.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+        </div>
+        <div class="column">
+            <img src=" Gallery/bronzeback.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+        </div>
+        <div class="column">
+            <img src="Gallery/sna.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+        </div>
+        <div class="column">
+            <img src="Gallery/viper.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+        </div>
+        <div class="column">
+            <img src=" Gallery/wolf.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+        </div>
+        <div class="column">
+            <img src=" Gallery/king.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+        </div>
+        <div class="column">
+            <img src=" Gallery/cob.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+        </div>
+        <div class="column">
+            <img src=" Gallery/bam.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+        </div>
+    </div>
+
+    <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+
+            <div class="mySlides">
+                <div class="numbertext">1 / 5</div>
+                <img src="Gallery/checkeredkeelback.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">2 / 5</div>
+                <img src="Gallery/bronzeback.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">3 / 5</div>
+                <img src=" Gallery/sna.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">4 / 5</div>
+                <img src="Gallery/viper.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">4 / 5</div>
+                <img src="Gallery/wolf.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">4 / 5</div>
+                <img src="Gallery/king.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">4 / 5</div>
+                <img src="Gallery/cob.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">4 / 5</div>
+                <img src="Gallery/bam.jpg" style="width:100%">
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+
+</body>
+</html>
